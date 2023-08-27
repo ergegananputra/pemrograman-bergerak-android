@@ -1,9 +1,10 @@
 package com.example.praktikumpemrogramanbergerakandroid
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.praktikumpemrogramanbergerakandroid.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,11 +17,31 @@ class MainActivity : AppCompatActivity() {
         with(binding){
 
             buttonLogin.setOnClickListener {
-                val uname : String = usernameInput?.text.toString()
-                val pwd : String = userPassword.text.toString()
+                val uname : String = edtUsername.text.toString()
+                val pwd : String = edtPassword.text.toString()
 
-                if (uname.isNotEmpty() && pwd.isNotEmpty()) {
-                    Toast.makeText(this@MainActivity, "Login Sukses", Toast.LENGTH_SHORT).show()
+
+                if (uname.isEmpty() || pwd.isEmpty()) {
+                    val snackbar = Snackbar.make(
+                        it,
+                        R.string.login_blank,
+                        Snackbar.LENGTH_SHORT
+                    )
+                    snackbar.setTextColor(Color.WHITE)
+                    snackbar.setBackgroundTint(Color.argb(255, 38, 46, 57))
+
+                    snackbar.show()
+
+                } else {
+                    val snackbar = Snackbar.make(
+                        it,
+                        R.string.login_success,
+                        Snackbar.LENGTH_SHORT
+                        )
+                    snackbar.setTextColor(Color.WHITE)
+                    snackbar.setBackgroundTint(Color.argb(255, 38, 46, 57))
+
+                    snackbar.show()
                 }
 
             }

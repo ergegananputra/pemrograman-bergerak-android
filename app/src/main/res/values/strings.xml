@@ -10,5 +10,7 @@
     <string name="password_hint">Masukkan Password</string>
 
     <string name="log_in">Log In</string>
-    <string name="log_in_sukses">Login Sukses</string>
+
+    <string name="login_success">Login Sukses</string>
+    <string name="login_blank">Masukkan Username dan Password Anda!"</string>
 </resources>

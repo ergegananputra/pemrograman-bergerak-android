@@ -4,26 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/login_background"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     android:padding="30dp"
-    android:background="@color/login_background"
-    tools:context=".MainActivity"
-    android:gravity="center_vertical"
-    >
+    tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
+        android:letterSpacing="0.04"
 
         android:text="@string/login"
 
-        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#1E293B"
         android:textSize="32sp"
-        android:letterSpacing="0.04"
-        android:textColor="#1E293B"/>
+        android:textStyle="bold" />
 
     <Space
         android:layout_width="match_parent"
@@ -48,14 +47,14 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:textSize="16sp"
-            android:hint="@string/username_hint"
             android:autofillHints="password"
-            android:inputType="text" />
+            android:hint="@string/username_hint"
+            android:inputType="text"
+            android:textSize="16sp" />
 
 
     </LinearLayout>
@@ -76,13 +75,14 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/user_password"
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:autofillHints="password"
             android:ems="10"
             android:hint="@string/password_hint"
+            android:importantForAutofill="auto"
             android:inputType="textPassword" />
 
 
@@ -100,7 +100,6 @@
         android:backgroundTint="#000113"
         android:text="@string/log_in"
         app:cornerRadius="20dp" />
-
 
 
 </LinearLayout>

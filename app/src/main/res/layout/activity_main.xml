@@ -48,7 +48,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/username_input"
+            android:id="@+id/edt_username"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_weight="1"
@@ -76,13 +76,14 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/user_password"
+            android:id="@+id/edt_password"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_weight="1"
             android:autofillHints="password"
             android:ems="10"
             android:hint="@string/password_hint"
+            android:importantForAutofill="auto"
             android:inputType="textPassword" />
 
 
