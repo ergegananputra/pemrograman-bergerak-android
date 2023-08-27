@@ -83,6 +83,7 @@
             android:ems="10"
             android:hint="@string/password_hint"
             android:importantForAutofill="auto"
+            android:textSize="16sp"
             android:inputType="textPassword" />
 
 
@@ -97,7 +98,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:backgroundTint="#000113"
+        android:backgroundTint="@color/button_login_background"
         android:text="@string/log_in"
         app:cornerRadius="20dp" />
 

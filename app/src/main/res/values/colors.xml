@@ -4,4 +4,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="login_background">#BFDBFE</color>
+    <color name="button_login_background">#000113</color>
+
 </resources>
